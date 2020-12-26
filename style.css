@@ -482,6 +482,21 @@ background: #606060;
     
 }
 @media only screen and (max-width: 600px) {
+    html, body {
+        height:100%;
+        padding:0;
+        margin:0;
+       }
+       body {
+        overflow-x: hidden;
+      }
+      .hidden-thing {
+        position: absolute;
+        left: 70%;
+        width: 20px;
+        height: 50px;
+        opacity: 0;
+      }
     .pricing{
         height: 270%;
     }
