@@ -2,12 +2,12 @@ html{
     width: 100%;
     height: auto;
     scroll-behavior: smooth !important;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 1 !important;
 }
-html, body {
-    height:100%;
-    padding:0;
-    margin:0;
-   }
+
    body {
     overflow-x: hidden;
   }
@@ -468,35 +468,94 @@ background: #606060;
 
 
 @media only screen and (max-width: 770px) {
-        .pricing{
-            height: 100%;
-        }
-        .happyclients{
-            width: 100%;
-            height: 100% !important;
-            padding: 80px 0;
-        }
-        .newslitter{
-            width: 80%;
-        }
-    
-}
-@media only screen and (max-width: 600px) {
-    html, body {
-        height:100%;
-        padding:0;
-        margin:0;
-       }
+   
+    html{
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        z-index: 1 !important;
+    }
        body {
         overflow-x: hidden;
       }
       .hidden-thing {
-        position: absolute;
+        position: fixed;
         left: 70%;
-        width: 20px;
+        width: 20px; 
         height: 50px;
         opacity: 0;
       }
+    
+      .navbar:before{
+        content: "";
+        position: relative;
+        bottom: 0%;
+        top: 0%;
+        left: 0;
+        right: 5;
+        opacity: .3;
+        z-index: 1;
+        
+    }
+      .navbar-nav {
+        display: inline-block !important;
+        text-align: right !important;
+        width: 100%;
+        z-index: 1 !important;
+         opacity: .3 !important;
+    }
+    .navbar{
+        background: none !important;
+    }
+   
+        .pricing{
+            height: 360% !important;
+        }
+        .second{
+            transform: translateY(-1px);
+            box-shadow: 0 0 0px 0 rgba(0, 0, 0,0, 3);
+        }
+        .card{
+          display: inline;
+        }
+        .card-row{
+            gap: 20px;
+        }
+        .happyclients{
+            height: 500% !important;
+            display: inline;
+        }
+        .newslitter{
+            width: 80%;
+        }
+        .contact-us{
+            height: 150% !important;
+        }
+    
+}
+@media only screen and (max-width: 600px) {
+    html{
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        z-index: 1 !important;
+    }
+       body {
+        overflow-x: hidden;
+        width: 100% !important;
+      }
+      .hidden-thing {
+        position: fixed !important;
+        left: 70%;
+        width: 20px; 
+        height: 50px;
+        opacity: 0;
+      }
+      p{
+        font-size: 0.9rem;
+        line-height: 1;
+        font-weight: 400;
+    }
     .pricing{
         height: 270%;
     }
@@ -518,7 +577,33 @@ background: #606060;
     }
     .container{
         display: center;
+        
     }
-
+    .navbar-brand{
+        font-size: 15px!important;
+    }
+    .navbar-nav {
+        display: inline !important;
+        text-align: right !important;
+        width: 10px;
+        z-index: 1 !important;
+        font-size: 10px;
+         
+    }
+    
+    .header-button a{
+        margin: 0 5px;
+        padding: 8px 25px; 
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 1.4;
+        text-decoration: none;
+   }
+   .font1{
+       font-size: 20px;
+   }
+   .font2{
+       font-size: 12px !important;
+   }
 }
 
